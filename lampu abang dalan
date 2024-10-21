@@ -1,0 +1,31 @@
+// Inisialisasi pin LED
+int led1 = 13; // LED 1 di pin 13
+int led2 = 12; // LED 2 di pin 12
+int led3 = 11; // LED 3 di pin 11
+
+void setup() {
+  // Atur ketiga pin LED sebagai output
+  pinMode(led1, OUTPUT);
+  pinMode(led2, OUTPUT);
+  pinMode(led3, OUTPUT);
+}
+
+void loop() {
+  // LED 1 menyala, LED lainnya mati
+  digitalWrite(led1, HIGH);
+  digitalWrite(led2, LOW);
+  digitalWrite(led3, LOW);
+  delay(1000); // Tunggu selama 1 detik
+  
+  // LED 2 menyala, LED lainnya mati
+  digitalWrite(led1, LOW);
+  digitalWrite(led2, HIGH);
+  digitalWrite(led3, LOW);
+  delay(1000); // Tunggu selama 1 detik
+  
+  // LED 3 menyala, LED lainnya mati
+  digitalWrite(led1, LOW);
+  digitalWrite(led2, LOW);
+  digitalWrite(led3, HIGH);
+  delay(1000); // Tunggu selama 1 detik
+}
